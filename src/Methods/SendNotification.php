@@ -10,6 +10,11 @@ class SendNotification extends BaseMethod
 {
     use GetApi, HandleApiErrors;
 
+    const MESSAGE_TYPE_TEXT = 'message';
+    const MESSAGE_TYPE_IMAGE = 'image';
+    const MESSAGE_TYPE_VIDEO = 'video';
+    const MESSAGE_TYPE_FILE = 'file';
+
     private array $messages;
     /**
      * @var array|false|mixed|string[]
