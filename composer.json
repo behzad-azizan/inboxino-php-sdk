@@ -1,0 +1,22 @@
+{
+    "name": "inboxino/php-api",
+    "description": "PHP programming interface",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Inboxino\\PhpApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "inboxino",
+            "email": "info@inboxino.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+      "php": ">=7.4.0",
+      "guzzlehttp/guzzle": "^7.0",
+      "ext-json": "*"
+    }
+}
