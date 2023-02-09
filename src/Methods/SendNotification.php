@@ -15,6 +15,9 @@ class SendNotification extends BaseMethod
     const MESSAGE_TYPE_VIDEO = 'video';
     const MESSAGE_TYPE_FILE = 'file';
 
+    const PLATFORM_WHATSAPP = 'whatsapp';
+    const PLATFORM_TELEGRAM = 'telegram';
+
     private array $messages;
     /**
      * @var array|false|mixed|string[]
@@ -23,7 +26,8 @@ class SendNotification extends BaseMethod
     /**
      * @var array|false|mixed|string[]
      */
-    private $platforms;
+    private $platforms = [self::PLATFORM_WHATSAPP];
+
     /**
      * @var mixed|null
      */
