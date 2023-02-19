@@ -79,7 +79,9 @@ class SendNotification extends BaseMethod
         $api = $this->getGuzzle();
         $messages = $this->messages;
         $options = [
-            'form_params' => []
+            'form_params' => [
+                'platforms' => $this->platforms
+            ]
         ];
         foreach ($messages as $key => $message) {
              try {
