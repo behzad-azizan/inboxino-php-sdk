@@ -9,6 +9,12 @@ class UploadFile extends BaseMethod
 {
     use GetApi, HandleApiErrors;
 
+    const TYPE_IMAGE = 'image';
+    const TYPE_VIDEO = 'video';
+    const TYPE_FILE = 'file';
+    const TYPE_EXCEL = 'excel';
+    const TYPE_AUDIO = 'audio';
+
     private ?string $filePath = null;
     private string $uploadType = '';
 
