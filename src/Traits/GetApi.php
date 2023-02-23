@@ -9,9 +9,11 @@ trait GetApi
     /**
      * @return \GuzzleHttp\Client
      */
-    protected function getGuzzle(): \GuzzleHttp\Client
+    protected function getGuzzle($baseUrl = null): \GuzzleHttp\Client
     {
-        $baseUrl = self::getApiBaseUrl();
+        if (! $baseUrl)
+            $baseUrl = self::getApiBaseUrl();
+
         $client = new \GuzzleHttp\Client([
             'base_uri' => $baseUrl,
             'headers' => $this->getBaseHeaders()

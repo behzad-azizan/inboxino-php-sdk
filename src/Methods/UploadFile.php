@@ -17,6 +17,7 @@ class UploadFile extends BaseMethod
 
     private ?string $filePath = null;
     private string $uploadType = '';
+    private string $uploadUrl = 'https://dl1.inboxino.com/api/';
 
     public function setFilePath(string $filePath): UploadFile
     {
@@ -34,7 +35,8 @@ class UploadFile extends BaseMethod
 
     public function upload()
     {
-        $api = $this->getGuzzle();
+        $baseUrl = $this->uploadUrl;
+        $api = $this->getGuzzle($baseUrl);
         $options = [
             'multipart' => [
                 [
