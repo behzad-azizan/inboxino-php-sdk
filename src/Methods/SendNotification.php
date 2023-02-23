@@ -54,6 +54,10 @@ class SendNotification extends BaseMethod
         if (! is_array($recipients))
             $recipients = explode(',', strval($recipients));
 
+        if ($addCountryCode) {
+            foreach ($recipients as &$recipient)
+                $recipient = $addCountryCode . $recipient;
+        }
         $this->recipients = $recipients;
         $this->addCountryCode = $addCountryCode;
 
