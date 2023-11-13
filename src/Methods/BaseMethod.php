@@ -2,7 +2,7 @@
 
 namespace Inboxino\PhpApi\Methods;
 
-use App\Traits\GetInstance;
+use Inboxino\PhpApi\Traits\GetInstance;
 use Inboxino\PhpApi\Traits\GetApi;
 
 class BaseMethod

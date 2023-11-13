@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Traits;
+namespace Inboxino\PhpApi\Traits;
 
 
 trait GetInstance
